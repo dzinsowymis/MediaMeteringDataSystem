@@ -9,8 +9,12 @@
 
 -- predefined type, no DDL - XMLTYPE
 
+
+ CREATE SEQUENCE  "NEXT_ID"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 121 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+
+
 CREATE TABLE bonus_payout (
-    id_employee      NUMBER(3) NOT NULL,
+    id_employee      NUMBER(3) default "NEXT_ID"."NEXTVAL" NOT NULL,
     date_payout      DATE,
     bonus_salary_pln NUMBER(5),
     id_bonus         NUMBER(2) NOT NULL
@@ -19,14 +23,14 @@ CREATE TABLE bonus_payout (
 ALTER TABLE bonus_payout ADD CONSTRAINT bonus_payout_pk PRIMARY KEY ( id_employee );
 
 CREATE TABLE bonus_type (
-    id_bonus          NUMBER(2) NOT NULL,
+    id_bonus          NUMBER(2) default "NEXT_ID"."NEXTVAL" NOT NULL,
     bonus_description VARCHAR2(100 CHAR)
 );
 
 ALTER TABLE bonus_type ADD CONSTRAINT bonus_type_pk PRIMARY KEY ( id_bonus );
 
 CREATE TABLE e_tariffs (
-    id_tariff      NUMBER(3)
+    id_tariff      NUMBER(3) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_e_tariffs_id_tariff NOT NULL,
     price_for_1kwh NUMBER(5, 2),
     date_start     DATE
@@ -35,7 +39,7 @@ CREATE TABLE e_tariffs (
 ALTER TABLE e_tariffs ADD CONSTRAINT e_tariffs_pk PRIMARY KEY ( id_tariff );
 
 CREATE TABLE elec_prod (
-    id_measurement    NUMBER(5)
+    id_measurement    NUMBER(5) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_elec_prod_id_measurement NOT NULL,
     id_meter          NUMBER(3)
         CONSTRAINT nnc_elec_prod_id_meter NOT NULL,
@@ -49,7 +53,7 @@ CREATE TABLE elec_prod (
 ALTER TABLE elec_prod ADD CONSTRAINT elec_prod_pk PRIMARY KEY ( id_measurement );
 
 CREATE TABLE elec_social (
-    id_measurement    NUMBER(5)
+    id_measurement    NUMBER(5) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_elec_social_id_measurement NOT NULL,
     id_meter          NUMBER(3)
         CONSTRAINT nnc_elec_social_id_meter NOT NULL,
@@ -63,7 +67,7 @@ CREATE TABLE elec_social (
 ALTER TABLE elec_social ADD CONSTRAINT elec_social_pk PRIMARY KEY ( id_measurement );
 
 CREATE TABLE employees (
-    employee_id     NUMBER(3) NOT NULL,
+    employee_id     NUMBER(3) default "NEXT_ID"."NEXTVAL" NOT NULL,
     firs_name       VARCHAR2(15 CHAR),
     last_name       VARCHAR2(30 CHAR),
     date_start_work DATE,
@@ -74,7 +78,7 @@ CREATE TABLE employees (
 ALTER TABLE employees ADD CONSTRAINT employees_pk PRIMARY KEY ( employee_id );
 
 CREATE TABLE g_tariffs (
-    id_tariffs   NUMBER(3)
+    id_tariffs   NUMBER(3) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_g_tariffs_id_tariffs NOT NULL,
     price_for_m3 NUMBER(5, 2),
     date_start   DATE
@@ -83,7 +87,7 @@ CREATE TABLE g_tariffs (
 ALTER TABLE g_tariffs ADD CONSTRAINT g_tariffs_pk PRIMARY KEY ( id_tariffs );
 
 CREATE TABLE gas_prod (
-    id_measurement   NUMBER(5)
+    id_measurement   NUMBER(5) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_gas_prod_id_measurement NOT NULL,
     id_meter         NUMBER(3)
         CONSTRAINT nnc_gas_prod_id_meter NOT NULL,
@@ -96,7 +100,7 @@ CREATE TABLE gas_prod (
 ALTER TABLE gas_prod ADD CONSTRAINT gas_prod_pk PRIMARY KEY ( id_measurement );
 
 CREATE TABLE gas_social (
-    id_measurement   NUMBER(5),
+    id_measurement   NUMBER(5) default "NEXT_ID"."NEXTVAL",
     id_meter         NUMBER(3) NOT NULL,
     date_measurement DATE,
     meter_reading_m3 NUMBER(9, 3),
@@ -106,7 +110,7 @@ CREATE TABLE gas_social (
 ALTER TABLE gas_social ADD CONSTRAINT gas_social_pk PRIMARY KEY ( id_tariffs );
 
 CREATE TABLE meters (
-    id_meter             NUMBER(3) NOT NULL,
+    id_meter             NUMBER(3) default "NEXT_ID"."NEXTVAL" NOT NULL,
     name_meter           VARCHAR2(30 CHAR),
     model_meter          VARCHAR2(30 CHAR),
     person_inspection    NUMBER(3) NOT NULL,
@@ -117,7 +121,7 @@ CREATE TABLE meters (
 ALTER TABLE meters ADD CONSTRAINT meters_pk PRIMARY KEY ( id_meter );
 
 CREATE TABLE w_tariffs (
-    id_tariff     NUMBER(3)
+    id_tariff     NUMBER(3) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_w_tariffs_id_tariff NOT NULL,
     price_for_1m3 NUMBER(5, 2),
     date_start    DATE
@@ -126,7 +130,7 @@ CREATE TABLE w_tariffs (
 ALTER TABLE w_tariffs ADD CONSTRAINT w_tariffs_pk PRIMARY KEY ( id_tariff );
 
 CREATE TABLE water_prod (
-    id_measurement   NUMBER(5)
+    id_measurement   NUMBER(5) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_water_prod_id_measurement NOT NULL,
     id_meter         NUMBER(3)
         CONSTRAINT nnc_water_prod_id_meter NOT NULL,
@@ -139,7 +143,7 @@ CREATE TABLE water_prod (
 ALTER TABLE water_prod ADD CONSTRAINT water_prod_pk PRIMARY KEY ( id_measurement );
 
 CREATE TABLE water_social (
-    id_measurement   NUMBER(5) NOT NULL,
+    id_measurement   NUMBER(5) default "NEXT_ID"."NEXTVAL" NOT NULL,
     id_meter         NUMBER(3) NOT NULL,
     date_measurement DATE,
     meter_reading_m3 NUMBER(8, 3),
