@@ -16,6 +16,10 @@ BEGIN
     FETCH FIRST 1 ROW ONLY;
 
     :new.id_tariff := v_id_tariff;
+
+EXCEPTION
+    WHEN no_data_found THEN
+        dbms_output.put_line('No tariff has been specified for the date entered');
 END bi_elec_prod;
 
 =======================================================
@@ -39,6 +43,10 @@ BEGIN
     FETCH FIRST 1 ROW ONLY;
 
     :new.id_tariff := v_id_tariff;
+
+EXCEPTION
+    WHEN no_data_found THEN
+        dbms_output.put_line('No tariff has been specified for the date entered');
 END bi_elec_social;
 
 
@@ -63,6 +71,10 @@ BEGIN
     FETCH FIRST 1 ROW ONLY;
 
     :new.id_tariff := v_id_tariff;
+
+EXCEPTION
+    WHEN no_data_found THEN
+        dbms_output.put_line('No tariff has been specified for the date entered');
 END bi_gas_prod_elec_prod;
 
 
@@ -87,6 +99,10 @@ BEGIN
     FETCH FIRST 1 ROW ONLY;
 
     :new.id_tariff := v_id_tariff;
+
+EXCEPTION
+    WHEN no_data_found THEN
+        dbms_output.put_line('No tariff has been specified for the date entered');
 END bi_gas_social;
 
 
@@ -112,6 +128,10 @@ BEGIN
     FETCH FIRST 1 ROW ONLY;
 
     :new.id_tariff := v_id_tariff;
+
+EXCEPTION
+    WHEN no_data_found THEN
+        dbms_output.put_line('No tariff has been specified for the date entered');
 END bi_water_prod;
 
 
@@ -137,6 +157,10 @@ BEGIN
     FETCH FIRST 1 ROW ONLY;
 
     :new.id_tariff := v_id_tariff;
+
+EXCEPTION
+    WHEN no_data_found THEN
+        dbms_output.put_line('No tariff has been specified for the date entered');
 END bi_water_social;
 
 
