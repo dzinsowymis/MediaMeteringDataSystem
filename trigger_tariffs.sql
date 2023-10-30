@@ -140,7 +140,7 @@ END bi_water_prod;
 
 
 create or replace TRIGGER bi_water_social BEFORE
-    INSERT ON gas_social
+    INSERT ON water_social
     FOR EACH ROW
 DECLARE
     v_id_tariff g_tariffs.id_tariff%TYPE;
