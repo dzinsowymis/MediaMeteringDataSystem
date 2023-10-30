@@ -1,3 +1,21 @@
+CREATE OR REPLACE PACKAGE pkg_meter_reading IS
+    PROCEDURE add_reading_e_prod;
+
+    PROCEDURE add_reading_e_social;
+
+    PROCEDURE add_reading_g_prod;
+
+    PROCEDURE add_reading_g_social;
+
+    PROCEDURE add_reading_w_prod;
+
+    PROCEDURE add_reading_w_social;
+
+END pkg_meter_reading;
+
+
+
+
 create or replace PACKAGE BODY pkg_meter_reading IS
 
     PROCEDURE add_reading_e_prod IS
