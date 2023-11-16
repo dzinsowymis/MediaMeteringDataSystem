@@ -80,7 +80,7 @@ ALTER TABLE employees ADD CONSTRAINT employees_pk PRIMARY KEY ( employee_id );
 CREATE TABLE g_tariffs (
     id_tariffs   NUMBER(3) default "NEXT_ID"."NEXTVAL"
         CONSTRAINT nnc_g_tariffs_id_tariffs NOT NULL,
-    price_for_m3 NUMBER(5, 2),
+    price_for_1m3 NUMBER(5, 2),
     date_start   DATE
 );
 
