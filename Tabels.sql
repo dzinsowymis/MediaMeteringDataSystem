@@ -100,14 +100,16 @@ CREATE TABLE gas_prod (
 ALTER TABLE gas_prod ADD CONSTRAINT gas_prod_pk PRIMARY KEY ( id_measurement );
 
 CREATE TABLE gas_social (
-    id_measurement   NUMBER(5) default "NEXT_ID"."NEXTVAL",
+    id_measurement   NUMBER(5) NOT NULL,
     id_meter         NUMBER(3) NOT NULL,
     date_measurement DATE,
     meter_reading_m3 NUMBER(9, 3),
     id_tariffs       NUMBER(3) NOT NULL
 );
 
-ALTER TABLE gas_social ADD CONSTRAINT gas_social_pk PRIMARY KEY ( id_tariffs );
+ALTER TABLE gas_social ADD CONSTRAINT gas_social_pk PRIMARY KEY ( id_measurement );
+
+
 
 CREATE TABLE meters (
     id_meter             NUMBER(3) default "NEXT_ID"."NEXTVAL" NOT NULL,
