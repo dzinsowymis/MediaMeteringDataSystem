@@ -1,15 +1,16 @@
 CREATE OR REPLACE PACKAGE pkg_meter_reading IS
-    PROCEDURE add_reading_e_prod;
+     
+     PROCEDURE add_reading_e_prod
 
-    PROCEDURE add_reading_e_social;
+    ;PROCEDURE add_reading_e_social
 
-    PROCEDURE add_reading_g_prod;
+    ;PROCEDURE add_reading_g_prod
 
-    PROCEDURE add_reading_g_social;
+    ;PROCEDURE add_reading_g_social
 
-    PROCEDURE add_reading_w_prod;
+    ;PROCEDURE add_reading_w_prod
 
-    PROCEDURE add_reading_w_social;
+    ;PROCEDURE add_reading_w_social;
 
 END pkg_meter_reading;
 
@@ -20,7 +21,7 @@ create or replace PACKAGE BODY pkg_meter_reading IS
 
     PROCEDURE add_reading_e_prod IS
 
-        v_random_e_prod             elec_prod.power_kwh%TYPE := dbms_random.value(0, 2000);
+        v_random_e_prod             elec_prod.power_kwh%TYPE := dbms_random.value(5000, 20000);
         v_current_elec_prod_reading elec_prod.meter_reading_kwh%TYPE;
     BEGIN
         BEGIN
@@ -46,7 +47,7 @@ create or replace PACKAGE BODY pkg_meter_reading IS
             power_kwh
         ) VALUES (
             11,
-            sysdate,
+           TO_DATE(sysdate, 'DD-MON-YYYY HH24:MI:SS'),
             v_current_elec_prod_reading + v_random_e_prod / 12,
             v_random_e_prod
         );
@@ -92,7 +93,7 @@ create or replace PACKAGE BODY pkg_meter_reading IS
 
 
     PROCEDURE add_reading_g_prod is
-        v_random_g_prod             gas_prod.meter_reading_m3%TYPE := dbms_random.value(0, 2000);
+        v_random_g_prod             gas_prod.meter_reading_m3%TYPE := dbms_random.value(5000, 10000);
         v_current_gas_prod_reading  gas_prod.meter_reading_m3%TYPE;
 
 
@@ -116,12 +117,13 @@ create or replace PACKAGE BODY pkg_meter_reading IS
         INSERT INTO gas_prod (
             id_meter,
             date_measurement,
-            meter_reading_m3
+            meter_reading_m3,
+            use_current
         ) 
         VALUES (
             132,
             sysdate,
-            v_current_gas_prod_reading+ v_random_g_prod
+            v_current_gas_prod_reading+ v_random_g_prod, v_random_g_prod
         );
 
     end add_reading_g_prod;
@@ -151,12 +153,14 @@ create or replace PACKAGE BODY pkg_meter_reading IS
         INSERT INTO gas_social (
             id_meter,
             date_measurement,
-            meter_reading_m3
+            meter_reading_m3,
+            use_current
         ) 
         VALUES (
             133,
             sysdate,
-            v_current_gas_social_reading + v_random_g_social
+            v_current_gas_social_reading + v_random_g_social,
+            v_random_g_social
         );
 
     end add_reading_g_social;
@@ -164,7 +168,7 @@ create or replace PACKAGE BODY pkg_meter_reading IS
 
 
      PROCEDURE add_reading_w_prod is
-        v_random_w_prod                 water_prod.meter_reading_m3%TYPE := dbms_random.value(0, 2000);
+        v_random_w_prod                 water_prod.meter_reading_m3%TYPE := dbms_random.value(2000, 9000);
         v_current_water_prod_reading    water_prod.meter_reading_m3%TYPE;
 
 
@@ -188,12 +192,14 @@ create or replace PACKAGE BODY pkg_meter_reading IS
         INSERT INTO water_prod (
             id_meter,
             date_measurement,
-            meter_reading_m3
+            meter_reading_m3,
+            use_current
         ) 
         VALUES (
             134,
             sysdate,
-            v_current_water_prod_reading+ v_random_w_prod
+            v_current_water_prod_reading+ v_random_w_prod,
+            v_random_w_prod
         );
 
     end add_reading_w_prod;
@@ -223,12 +229,14 @@ create or replace PACKAGE BODY pkg_meter_reading IS
         INSERT INTO water_social (
             id_meter,
             date_measurement,
-            meter_reading_m3
+            meter_reading_m3,
+            use_current
         ) 
         VALUES (
             135,
             sysdate,
-            v_current_water_social_reading+ v_random_w_social
+            v_current_water_social_reading+ v_random_w_social,
+            v_random_w_social
         );
 
     end add_reading_w_social;
