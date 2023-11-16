@@ -98,7 +98,7 @@ BEGIN
         date_start
     FETCH FIRST 1 ROW ONLY;
 
-    :new.id_tariff := v_id_tariff;
+    :new.id_tariffs := v_id_tariff;
 
 EXCEPTION
     WHEN no_data_found THEN
@@ -111,7 +111,7 @@ END bi_gas_social;
 
 
 create or replace TRIGGER bi_water_prod BEFORE
-    INSERT ON gas_social
+    INSERT ON water_prod
     FOR EACH ROW
 DECLARE
     v_id_tariff g_tariffs.id_tariff%TYPE;
@@ -127,12 +127,13 @@ BEGIN
         date_start
     FETCH FIRST 1 ROW ONLY;
 
-    :new.id_tariff := v_id_tariff;
+    :new.id_tariffs := v_id_tariff;
 
 EXCEPTION
     WHEN no_data_found THEN
         dbms_output.put_line('No tariff has been specified for the date entered');
 END bi_water_prod;
+
 
 
 
