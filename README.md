@@ -3,7 +3,7 @@
 1. [General info](#General_info)
 * [About project](#About_project)
 * [My personal goals](#My_personal_goals)
-* [Built with](#https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#built-with)
+* [Built with](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#built-with)
 * [How to star](#how-to-start)
 
 
