@@ -1,11 +1,10 @@
 
 ## Table of contents
-1. [General info](#General_info)
-* [About project](#About_project)
-* [My personal goals](#My_personal_goals)
+1. [General info](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#general-info)
+* [About project](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#about-project)
+* [My personal goals](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#my-personal-goals)
 * [Built with](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#built-with)
-* [How to star](#how-to-start)
-
+* [How to star](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#how-to-star)
 
 
 # General info
@@ -44,6 +43,9 @@ There are many other IDEs such as Toad, PL/SQL Developer or DataGrip but if You 
 
 Installing SQL Developer on Windows
 Process of instalation is quite simple, but if You would have a problem [here](https://docs.oracle.com/en/database/oracle/sql-developer/22.2/rptug/sql-developer-concepts-usage.html#GUID-156BEBA3-2F9B-4CE0-8E91-728581FF46AB) is documentation on the subject.
+
+
+
 
 
 
