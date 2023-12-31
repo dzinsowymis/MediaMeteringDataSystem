@@ -3,9 +3,9 @@
 1. [General info](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#general-info)
 * [About project](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#about-project)
 * [My personal goals](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#my-personal-goals)
-2.[Built with](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#built-with)
+2. [Built with](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#built-with)
 * [Tools](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#tools)
-3.[How to star](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#how-to-star)
+3. [How to star](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#how-to-star)
 * [Installation](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#Installation)
 * [How to use this database](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#How-to-use-this-database)
 
@@ -57,3 +57,17 @@ Process of instalation is quite simple, but if You would have a problem [here](h
     * [triggers](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/triggers)
     * [jobs](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/jobs)
     * [packages](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/pkg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
