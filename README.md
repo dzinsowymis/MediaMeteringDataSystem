@@ -1,10 +1,10 @@
 
 ## Table of contents
-1. [General info](#General-info)
-* [About project](#About-project)
-* [My personal goals](#My-personal-goals)
-* [Built with](Built-with)
-* [How to star](how-to-start)
+1. [General info](#General_info)
+* [About project](#About_project)
+* [My personal goals](#My_personal_goals)
+* [Built with](#Built_with)
+* [How to star](#how_to_start)
 
 
 
