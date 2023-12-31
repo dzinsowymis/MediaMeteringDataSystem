@@ -3,8 +3,11 @@
 1. [General info](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#general-info)
 * [About project](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#about-project)
 * [My personal goals](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#my-personal-goals)
-* [Built with](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#built-with)
-* [How to star](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#how-to-star)
+2.[Built with](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#built-with)
+* [Tools](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#tools)
+3.[How to star](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#how-to-star)
+* [Installation](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#Installation)
+* [How to use this database](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/main?tab=readme-ov-file#How-to-use-this-database)
 
 
 # General info
@@ -34,7 +37,7 @@ Tools:
 
 ## How to star
 
-Prerequisites
+Installation
 1. To download `SQL Developer` You need a free `Oracle Account`. You can create one [here](https://profile.oracle.com/myprofile/account/create-account.jspx).
 2. `SQL Developer` is an Oracle's cross-platform client application designed for working with databases. You can download it [here](https://www.oracle.com/database/sqldeveloper/technologies/download/) from Oracle's website.
 It's important to work with tool which can present basic graphical table schema of database. You can use Oracle's text-based SQLPlus but I don't recommend it for the reason above.
@@ -46,12 +49,11 @@ Process of instalation is quite simple, but if You would have a problem [here](h
 
 
 
-
-
-
-
-
-
-
-
-
+## How to use this database
+1. Set the date to DD-MON-YYYY HH24:MI:SS. This type of date is used in tables, procedures etc.
+2. Use these files to install the database:
+    * [seqences](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/seqences)
+    * [tabels](https://github.com/dzinsowymis/MediaMeteringDataSystem/blob/feature/tabels) 
+    * [triggers](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/triggers)
+    * [jobs](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/jobs)
+    * [packages](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/pkg)
