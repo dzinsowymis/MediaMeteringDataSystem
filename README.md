@@ -4,7 +4,7 @@
 * [About project](#About_project)
 * [My personal goals](#My_personal_goals)
 * [Built with](#Built_with)
-* [How to star](#how_to_start)
+* [How to star](##how-to-start)
 
 
 
