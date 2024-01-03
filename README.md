@@ -53,21 +53,8 @@ Process of instalation is quite simple, but if You would have a problem [here](h
 1. Set the date to DD-MON-YYYY HH24:MI:SS. This type of date is used in tables, procedures etc.
 2. Use these files to install the database:
     * [seqences](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/seqences)
-    * [tabels](https://github.com/dzinsowymis/MediaMeteringDataSystem/blob/feature/tabels) 
+    * [tabels](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/tabels) 
     * [triggers](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/triggers)
     * [jobs](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/jobs)
     * [packages](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/pkg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    * [views](https://github.com/dzinsowymis/MediaMeteringDataSystem/tree/feature/views)
